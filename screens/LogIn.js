@@ -11,11 +11,6 @@ const HomeScreen = ({navigation}) => {
 
   const handleSignIn =  () => {
    
-// 
-   
-   
-   
-     // Validate input fields
      if (!username || !email || !password || !confirmPassword) {
       Alert.alert('Error', 'All fields are required');
       return;
@@ -25,60 +20,29 @@ const HomeScreen = ({navigation}) => {
       Alert.alert('Error', 'Passwords do not match');
       return;
     }
-   // Proceed with sign-up logic (e.g., make API call, save to database, etc.)
-    // For demonstration purposes, just log the values
+ 
     console.log('Signing up with:', username, email, password, confirmPassword);
 
-    // Reset input fields after sign-up
     setUsername('');
     setEmail('');
     setPassword('');
     setConfirmPassword('');
-
-    // Show success message or navigate to another screen
+    
     Alert.alert('Success', 'Sign-up successful!');
    
-   
-   
-   
-   
-  //  
-   
-   
-   
-    // Check if username and password are correct
-    //  if (username === 'user' && password === 'password') {
-      // If correct, navigate to the home screen or perform other actions
-      // Alert.alert('Success', 'You have successfully signed in!');
-    //  } else {
-      // If incorrect, show an error message
-      // Alert.alert('Error', 'Invalid details. Please try again.');
-    //  }
-
-};
-
+  };
 
   return (
  
    
       <View style={styles.container}>
         <Text style={styles.title}>Sign Up</Text>
-       
-      
-       
-      
-   
-  
-       
-        <TextInput 
+             <TextInput 
           style={styles.input}
-      
           placeholder="Enter your Name"
           value={username}
           onChangeText={setUsername}
         />
-
-
          <TextInput 
           style={styles.input}
        
@@ -105,10 +69,7 @@ const HomeScreen = ({navigation}) => {
   
   <TouchableOpacity title="Sign Up" onPress={handleSignIn} style={styles.button}>
          <Text  style={styles.buttonText}>SignUp</Text>
-  
          </TouchableOpacity>
-  
-  
         <View style={styles.footer}>
         <Text onPress={()=>navigation.navigate("Company Logo")} style={styles.text}>You have account? LogIn</Text>
       </View>
@@ -127,11 +88,6 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     marginBottom: 20,
-
-
-
-   
-   
   },
   input: {
     width: '80%',
@@ -157,10 +113,10 @@ const styles = StyleSheet.create({
     color: '#333',
   },
   button: {
-    backgroundColor: '#000', // Black background color
-    width: '80%', // Width of the button
-    height: 50, // Height of the button
-    borderRadius: 5, // Rounded corners
+    backgroundColor: '#000', 
+    width: '80%',
+    height: 50, 
+    borderRadius: 5, 
     justifyContent: 'center',
     alignItems: 'center',
     
@@ -181,5 +137,3 @@ export default HomeScreen;
 
 
 
-// 
-// 
