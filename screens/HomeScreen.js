@@ -6,16 +6,12 @@ const LoginPage = ({navigation}) => {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    // Validation checks can be added here
-
-    // Example validation: Check if username and password are not empty
+   
     if (!username || !password) {
       Alert.alert('Error', 'Please enter both username and password.');
       return;
     }
 
-    // Perform login logic here, such as calling an authentication API
-    // For simplicity, let's assume successful login if both fields are filled
     Alert.alert('Success', 'You have successfully logged in!');
   };
 
@@ -86,10 +82,10 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    backgroundColor: '#000', // Black background color
-    width: '80%', // Width of the button
-    height: 50, // Height of the button
-    borderRadius: 5, // Rounded corners
+    backgroundColor: '#000', 
+    width: '80%', 
+    height: 50, 
+    borderRadius: 5, 
     justifyContent: 'center',
     alignItems: 'center',
   },
